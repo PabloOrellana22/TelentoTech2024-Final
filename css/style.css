@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to right,green,white,green);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header, main {
+    margin: 1em auto;
+    padding: 0 1em;
+}
+
+header{
+    align-content: center;
+}
+
+footer {
+    width: 100%;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+}
+
+#datos {
+    height: 160px;
+    padding: 20px;
+    background-color: #0c583e;
+}
+
+/* Estilo iconos de redes sociales */
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.4);
+}
+
+/* #orden {
+    display: grid;
+    min-height: 100dvh;
+    grid-auto-rows: auto 1fr auto;
+} */
+
+.barraMenu ul {
+    float: right;   
+}
+
+.barraMenu ul li {
+    display: inline;
+    flex: 1 0 auto;     /*Combinamos 3 propiedades: 
+                            Flex-grow: permite que el elemento crezca para ocupar espacio disponible en lo que le queda en el contenedor
+                            Flex-shrink: evita que el elemento se reduzca si ese espacio es muy limitado. (Trata de que no se encojan mucho)
+                            Flex-basis: establece el tamaño base del elemento antes de aplicar el crecimiento o reducción */
+    text-align: center;
+}
+
+.barraMenu ul li a {
+    display: inline-block;
+    text-decoration: none;
+    /* color: white; */
+    padding: .6em 4em;
+    background-color: #0c583e;
+    color: white;
+}
+
+.barraMenu ul li a:hover {
+    background: rgb(68, 216, 55);
+    color: white;
+    font-weight: bold;
+}
+
+.itemSeleccionado {
+    display: inline-block;
+    padding: .6em 4em;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(68, 216, 55);
+}
+
+h1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    /* background-color: #0c583e; */
+    background: linear-gradient(to right,rgb(14, 201, 14),green,rgb(14, 201, 14));
+    padding: 10px;
+    color: white;
+}
+
+/*******************
+    Page INDEX
+********************/
+#logo img {
+    width:220px;
+    height: 100px;
+    float: left;
+}
+
+#logo img:hover {
+    transform: rotate(360deg);
+    transition: 2s;
+}
+
+.presentacion {
+    font-size: 1.5em;
+    margin-left: 70px;
+}
+
+/*Configuro las imagenes centradas*/
+.carousel-inner {
+    height: 545px; /*Indico el alto del contenedor*/
+    display: flex;  /*Debo poner FLEX para que las imagenes tomen el Height que indique arriba*/
+    background-color: white;
+}
+
+.carousel-img {
+    display: flex;
+    justify-self: center;   /*Centro las imagenes pero con SELF porque son ellas quienes se centran*/
+    height: 100%;   /*Al 100% porque le di al Contenedor un height de 600px asi estas imagenes los ocupa todo*/
+}
+
+
+.carousel-control-prev {
+    background: linear-gradient(to right,green,white);
+}
+.carousel-control-next {
+    background: linear-gradient(to left,green,white);
+}
+
+
+/*********************
+    Page CONTACTO
+**********************/
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 90%;
+    justify-self: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 50%;
+}
+
+fieldset legend {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+#mensaje {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 50%;
+}
+
+#mensaje textarea {
+    font-size: 1.25em;
+    width:100%;
+}
+
+#botonEnviar {
+    padding: 10px;
+    align-self: center;
+    background-color: green;
+    color: white;
+}
+ #botonEnviar:hover {
+    background-color: greenyellow;
+    color: black;
+    border: 2px solid black
+ }
+
+
+/*********************
+    Page PRODUCTOS
+**********************/
+.centrado {
+    margin: 0 auto;
+    padding: 0 .8em;
+}
+
+.titulo1 {
+    margin: 0 0 1em;
+    padding: 1em 0;
+    font-weight: 300;   /*El grosor de la fuente*/
+    color: hsl(0, 69%, 26%);
+    text-align: center;
+}
+
+.tarjeta a {
+    color: rgb(36, 5, 5);
+    text-decoration: none;
+}
+
+.tarjeta a:hover {
+    box-shadow: 3px 3px 8px #817272;    /*Cuando paso con el mouse me hace como una sombra*/
+}
+
+.tarjeta-content {
+    padding: 1.4em;
+    height: 350px;
+    background: linear-gradient(white,rgb(142, 232, 58), white );
+}
+
+.tarjeta-content h2 {
+    margin-top: 0;
+    margin-bottom: .5em;
+    font-weight: normal;
+}
+
+.tarjeta-content p {
+    font-size: 95%;     /*Esto como se va achicar mucho, no es conveniente ponerle px, es mejor porcentaje*/
+}
+
+figure {
+    margin: 0;
+    height: 400px;
+}
+
+.tarjeta figure img {
+    display: block;
+    border: 0;
+    width: auto;        /* 100% para que ocupe siempre todo el ancho*/
+    height: 100%;       /* En AUTO se va a adaptar de acuerdo a lo que lo voy achicando*/
+    padding: 5px;
+    justify-self: center;
+}
+
+/* estilo FLEX */
+
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tarjeta {
+    background: hsl(0, 0%, 100%);
+    margin-bottom: 2em;
+    width: 33%;     /*Le indicamos que cada Tarjeta ocupe la tercera parte de la pantalla*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.botonAgregar {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+    border: 4px solid rgb(6, 82, 6);
+}
+
+.botonAgregar:hover {
+    background-color: greenyellow;
+    color: black;
+    font-size: 32px;
+}
+
+.botonContent {
+    background-color: rgb(130, 221, 188);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+/**************************
+    Page RECOMENDACIONES
+***************************/
+
+.tarjetasReco {
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    gap: 10px;
+}
+
+.tarjetaReco {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 3px solid rgb(9, 98, 9);
+    width: 33%;        /* 100% para que ocupe siempre todo el ancho*/
+    height: auto;       /* En AUTO se va a adaptar de acuerdo a lo que lo voy achicando*/
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.tarjetaReco h2 {
+    width: 35%;
+    text-align: center;
+}
+
+.tarjetaReco video {
+    width: 65%;
+}
+
+#conten {
+    height: 43dvh;
+    align-content: end;
+}
+
+
+/*CARRITO*/
+
+#carrito {
+    margin-top: 20px;
+    background: linear-gradient(rgb(114, 200, 33), white, rgb(81, 152, 15));
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 50px;
+}
+
+#checkout-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-content {
+    background-color: rgb(222, 240, 193);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+#checkout-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.checkout-content button, #carrito button {
+    background-color: green;
+    border: 2px solid rgb(6, 82, 6);
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;    /*Cuando pasa el mouse por el Button, se transforma en una manito*/
+    margin: 5px;
+}
+
+.checkout-content button:hover, #carrito button:hover {
+    background-color: greenyellow;
+    color:black;
+}
+
+#lista-carrito button {
+    border: 2px solid red;
+    background-color: rgb(156, 95, 95);
+}
+
+#lista-carrito button:hover {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
